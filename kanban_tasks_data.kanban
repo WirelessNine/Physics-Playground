@@ -10,7 +10,15 @@
 		{
 			"uuid": "492dea3d-947d-4d5f-af55-404d7e8f1aff",
 			"title": "Todo",
-			"tasks": []
+			"tasks": [
+				"42664e29-1f43-4557-aff5-755353be074e",
+				"81a7c08f-c9de-4787-83b4-ee29986ad6f1",
+				"2e018314-f724-4158-a5eb-c24d6bdeef12",
+				"a29631c2-6345-41f7-99bb-b04c07f81454",
+				"a6793641-981b-4946-bb46-815f50f195d4",
+				"a070cde6-c320-4ed8-bcd3-7953302d39ae",
+				"d850e74c-00d9-44c6-a497-d686fbb11717"
+			]
 		},
 		{
 			"uuid": "54785461-7507-4190-9071-3daa6072973f",
@@ -20,10 +28,69 @@
 		{
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"55775f33-ccc7-4c61-a512-d758db5a069c"
+			]
 		}
 	],
-	"tasks": [],
+	"tasks": [
+		{
+			"uuid": "42664e29-1f43-4557-aff5-755353be074e",
+			"title": "Add Box level bounds",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "81a7c08f-c9de-4787-83b4-ee29986ad6f1",
+			"title": "Add camera controller",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "2e018314-f724-4158-a5eb-c24d6bdeef12",
+			"title": "Add ground textures",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "55775f33-ccc7-4c61-a512-d758db5a069c",
+			"title": "Add Rapier2D physics",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "a29631c2-6345-41f7-99bb-b04c07f81454",
+			"title": "Add placeholder physics object",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "a6793641-981b-4946-bb46-815f50f195d4",
+			"title": "Add object spawning",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "a070cde6-c320-4ed8-bcd3-7953302d39ae",
+			"title": "Add object menu",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "d850e74c-00d9-44c6-a497-d686fbb11717",
+			"title": "Add resource for physics objects",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		}
+	],
 	"layout": {
 		"columns": [
 			[

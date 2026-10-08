@@ -46,6 +46,7 @@ joypads/ignore_joypad_on_unfocused_application=true
 
 [physics]
 
+2d/physics_engine="Rapier2D"
 3d/physics_engine="Jolt Physics"
 
 [rendering]
