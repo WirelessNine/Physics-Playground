@@ -15,9 +15,9 @@ func _ready() -> void:
 	target_zoom = zoom
 
 
-func _process(delta: float) -> void:
-	position = position.lerp(target_position, delta * DRAG_WEIGHT)
-	zoom = zoom.lerp(target_zoom, delta * DRAG_WEIGHT)
+func _process(_delta: float) -> void:
+	position = target_position
+	zoom = target_zoom
 
 
 func _unhandled_input(event: InputEvent) -> void:

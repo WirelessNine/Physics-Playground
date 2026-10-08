@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bkaa0hbhyn7ap"]
+
+[ext_resource type="Script" uid="uid://unwhnooi7g2c" path="res://addons/godot-rapier2d/custom_nodes/rapier_rigid_body_2d.gd" id="1_gwvvm"]
+[ext_resource type="Texture2D" uid="uid://dro57pcpfivjr" path="res://resources/visual/textures/placeholder.tres" id="1_vi1sv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
+size = Vector2(16, 16)
+
+[node name="Placeholder" type="RigidBody2D" unique_id=1693297757]
+script = ExtResource("1_gwvvm")
+metadata/_custom_type_script = "uid://unwhnooi7g2c"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("1_vi1sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624513849]
+shape = SubResource("RectangleShape2D_as85p")
