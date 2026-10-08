@@ -3,7 +3,7 @@ extends Camera2D
 const DRAG_WEIGHT: float = 30.0
 const ZOOM_INC: float = 0.25
 const ZOOM_MIN: float = 0.1
-const ZOOM_MAX: float = 2.0
+const ZOOM_MAX: float = 5.0
 
 var is_dragging: bool
 var target_position: Vector2
@@ -13,6 +13,11 @@ var target_zoom: Vector2
 func _ready() -> void:
 	target_position = position
 	target_zoom = zoom
+
+
+func _process(delta: float) -> void:
+	position = position.lerp(target_position, delta * DRAG_WEIGHT)
+	zoom = zoom.lerp(target_zoom, delta * DRAG_WEIGHT)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -38,8 +43,3 @@ func _unhandled_input(event: InputEvent) -> void:
 		target_zoom.y = clamp(target_zoom.y, ZOOM_MIN, ZOOM_MAX)
 
 		target_position = mouse_pos + (target_position - mouse_pos) * (old_zoom / target_zoom)
-
-
-func _process(delta: float) -> void:
-	position = position.lerp(target_position, delta * DRAG_WEIGHT)
-	zoom = zoom.lerp(target_zoom, delta * DRAG_WEIGHT)

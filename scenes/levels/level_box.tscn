@@ -2,15 +2,52 @@
 
 [ext_resource type="Script" uid="uid://uhegdtdelhqr" path="res://scenes/levels/level_box.gd" id="1_2oq2a"]
 [ext_resource type="Script" uid="uid://b10wqiylavd4h" path="res://classes/node/controlled_camera.gd" id="2_sh4qy"]
-[ext_resource type="Texture2D" uid="uid://cfxdu5aajhonl" path="res://icon.svg" id="3_ra0ta"]
+[ext_resource type="Script" uid="uid://busd3yfk5p1mx" path="res://addons/godot-rapier2d/custom_nodes/rapier_static_body_2d.gd" id="4_0dwki"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_as85p"]
+distance = -3000.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0dwki"]
+normal = Vector2(0, 1)
+distance = -3000.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_571p0"]
+normal = Vector2(1, 0)
+distance = -3000.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7myre"]
+normal = Vector2(-1, 0)
+distance = -3000.0
 
 [node name="Box" type="Node" unique_id=64724794]
 script = ExtResource("1_2oq2a")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=192829464]
+position = Vector2(0, 2560.9321)
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("2_sh4qy")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=250916500]
-position = Vector2(-6.23127, -14.496859)
-texture = ExtResource("3_ra0ta")
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1483718109]
+script = ExtResource("4_0dwki")
+metadata/_custom_type_script = "uid://busd3yfk5p1mx"
+metadata/_edit_lock_ = true
+
+[node name="Bottom" type="CollisionShape2D" parent="Ground" unique_id=242495904]
+shape = SubResource("WorldBoundaryShape2D_as85p")
+
+[node name="Top" type="CollisionShape2D" parent="Ground" unique_id=2058653160]
+shape = SubResource("WorldBoundaryShape2D_0dwki")
+
+[node name="Left" type="CollisionShape2D" parent="Ground" unique_id=1120399630]
+shape = SubResource("WorldBoundaryShape2D_571p0")
+
+[node name="Right" type="CollisionShape2D" parent="Ground" unique_id=588725186]
+shape = SubResource("WorldBoundaryShape2D_7myre")
+
+[node name="Polygon2D" type="Polygon2D" parent="Ground" unique_id=192650334]
+color = Color(0.043039158, 0.04303915, 0.04303915, 1)
+invert_enabled = true
+invert_border = 16384.0
+polygon = PackedVector2Array(3000, -3000, 3000, 3000, -3000, 3000, -3000, -3000)
+uv = PackedVector2Array(2972.4673, 66.69987, 2921.3896, 248.97836, 2708.8022, 203.88406, 2794.1592, 20.285889)
+metadata/_edit_lock_ = true
