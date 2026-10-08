@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://dhy0a4ixn4858"]
 
 [ext_resource type="Script" uid="uid://uhegdtdelhqr" path="res://scenes/levels/level_box.gd" id="1_2oq2a"]
+[ext_resource type="Script" uid="uid://b10wqiylavd4h" path="res://classes/node/controlled_camera.gd" id="2_sh4qy"]
+[ext_resource type="Texture2D" uid="uid://cfxdu5aajhonl" path="res://icon.svg" id="3_ra0ta"]
 
 [node name="Box" type="Node" unique_id=64724794]
 script = ExtResource("1_2oq2a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=192829464]
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_sh4qy")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=250916500]
+position = Vector2(-6.23127, -14.496859)
+texture = ExtResource("3_ra0ta")
