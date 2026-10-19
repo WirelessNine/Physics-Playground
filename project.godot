@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Physics Playground"
-run/main_scene="uid://dhy0a4ixn4858"
+run/main_scene="uid://k2hoaqwqrnk3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

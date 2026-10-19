@@ -13,7 +13,14 @@
 			"tasks": [
 				"a070cde6-c320-4ed8-bcd3-7953302d39ae",
 				"d850e74c-00d9-44c6-a497-d686fbb11717",
-				"b43c0a14-249d-49dc-a0da-211c6cb7e034"
+				"b43c0a14-249d-49dc-a0da-211c6cb7e034",
+				"df9489f6-2e9a-48b2-9352-42e9d91c0e07",
+				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
+				"2fb4f5c4-e9b6-4aae-a929-fb3d55f40b02",
+				"f0b50e49-234b-431f-92e8-2ad5ade86bf8",
+				"6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
+				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06",
+				"2fabbc38-0d06-43c9-88a1-78af064ad1a4"
 			]
 		},
 		{
@@ -25,6 +32,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"229ea22b-4e7e-40f4-b394-f9e702e245e8",
 				"a6793641-981b-4946-bb46-815f50f195d4",
 				"a29631c2-6345-41f7-99bb-b04c07f81454",
 				"42664e29-1f43-4557-aff5-755353be074e",
@@ -86,6 +94,62 @@
 		{
 			"uuid": "b43c0a14-249d-49dc-a0da-211c6cb7e034",
 			"title": "Add object dragging",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "df9489f6-2e9a-48b2-9352-42e9d91c0e07",
+			"title": "Add Constraint object",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
+			"title": "Add Simulation manager",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "229ea22b-4e7e-40f4-b394-f9e702e245e8",
+			"title": "Add Game scene",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "2fb4f5c4-e9b6-4aae-a929-fb3d55f40b02",
+			"title": "Add time pausing",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "f0b50e49-234b-431f-92e8-2ad5ade86bf8",
+			"title": "Add time slowing",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
+			"title": "Limit camera",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "add94f81-ff14-48c8-b7ef-e6fdd6b3db06",
+			"title": "Make map borders extend infinitely",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "2fabbc38-0d06-43c9-88a1-78af064ad1a4",
+			"title": "Add select outline",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
