@@ -15,7 +15,7 @@ func _ready() -> void:
 	target_zoom = zoom
 
 
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	position = target_position
 	zoom = target_zoom
 
