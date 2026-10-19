@@ -31,6 +31,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"9d623f7d-61dd-4c1d-9ab0-8f9f169eb952",
 				"cd1634ed-e328-4623-87d3-f55a3dd7bfa6",
 				"b43c0a14-249d-49dc-a0da-211c6cb7e034",
 				"229ea22b-4e7e-40f4-b394-f9e702e245e8",
@@ -158,6 +159,13 @@
 		{
 			"uuid": "cd1634ed-e328-4623-87d3-f55a3dd7bfa6",
 			"title": "Fix object spawing interpolation",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "9d623f7d-61dd-4c1d-9ab0-8f9f169eb952",
+			"title": "Add UI Expansion addon",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
