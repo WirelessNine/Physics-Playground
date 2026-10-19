@@ -8,3 +8,4 @@ func _unhandled_input(event: InputEvent) -> void:
 		var object: RapierRigidBody2D = PLACEHOLDER.instantiate()
 		add_child(object)
 		object.position = object.get_global_mouse_position()
+		object.reset_physics_interpolation()
