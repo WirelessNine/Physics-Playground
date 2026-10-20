@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bregex5prhaps"]
+
+[ext_resource type="Texture2D" uid="uid://dro57pcpfivjr" path="res://resources/visual/textures/square.tres" id="1_aaqe1"]
+[ext_resource type="Script" uid="uid://cjy41xh862cbv" path="res://scenes/ui/containers/body_slot.gd" id="2_wlrae"]
+
+[node name="BodySlot" type="Button" unique_id=1299098077]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_type_variation = &"button_slot"
+icon = ExtResource("1_aaqe1")
+script = ExtResource("2_wlrae")

@@ -30,6 +30,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"b11ee638-c2f9-4c75-8ac1-192b1ceafe89",
 				"9f2f2d20-5c9e-4889-9e35-54f57775388f",
 				"0c3f965d-8e91-4c7d-8113-d4121d7be97f",
 				"a070cde6-c320-4ed8-bcd3-7953302d39ae",
@@ -182,6 +183,13 @@
 		{
 			"uuid": "9f2f2d20-5c9e-4889-9e35-54f57775388f",
 			"title": "Add BodyItem resource",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "b11ee638-c2f9-4c75-8ac1-192b1ceafe89",
+			"title": "Add BodySlot",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
