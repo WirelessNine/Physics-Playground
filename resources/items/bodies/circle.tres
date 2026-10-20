@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://brnciqwp4g0c1"]
+
+[ext_resource type="Texture2D" uid="uid://b16k4acd3ycp" path="res://resources/visual/textures/circle.tres" id="1_gfw4u"]
+[ext_resource type="PackedScene" uid="uid://c1eqtj65r14ig" path="res://scenes/objects/sphere.tscn" id="2_gfw4u"]
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="3_sboqd"]
+
+[resource]
+script = ExtResource("3_sboqd")
+icon = ExtResource("1_gfw4u")
+name = "Circle"
+description = "Ball, this is a ball... Ball."
+scene = ExtResource("2_gfw4u")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"

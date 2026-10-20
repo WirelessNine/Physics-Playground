@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://dv66yyljcjh6u"]
+
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="1_hchip"]
+[ext_resource type="Texture2D" uid="uid://dro57pcpfivjr" path="res://resources/visual/textures/square.tres" id="1_ib187"]
+[ext_resource type="PackedScene" uid="uid://bkaa0hbhyn7ap" path="res://scenes/objects/square.tscn" id="2_elg1f"]
+
+[resource]
+script = ExtResource("1_hchip")
+icon = ExtResource("1_ib187")
+name = "Square"
+description = "Your oridnary shape with 4 right angles."
+scene = ExtResource("2_elg1f")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"

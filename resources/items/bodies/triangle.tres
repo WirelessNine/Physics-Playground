@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://ds51r8psc5nbo"]
+
+[ext_resource type="Texture2D" uid="uid://mcttoq4p6788" path="res://resources/visual/textures/triangle.tres" id="1_istke"]
+[ext_resource type="PackedScene" uid="uid://cuwt4bv8iroof" path="res://scenes/objects/triangle.tscn" id="2_gagqg"]
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="3_me1qa"]
+
+[resource]
+script = ExtResource("3_me1qa")
+icon = ExtResource("1_istke")
+name = "Triangle"
+description = "A shape with tri-angles, heh, get it?"
+scene = ExtResource("2_gagqg")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"
