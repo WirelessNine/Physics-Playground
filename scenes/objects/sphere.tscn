@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c1eqtj65r14ig"]
+
+[ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="1_cwnnc"]
+[ext_resource type="Texture2D" uid="uid://b16k4acd3ycp" path="res://resources/visual/textures/circle.tres" id="2_cwnnc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cwnnc"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtywe"]
+radius = 16.0
+
+[node name="Square" type="RigidBody2D" unique_id=1575716861]
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_cwnnc")
+continuous_cd = 2
+script = ExtResource("1_cwnnc")
+metadata/_custom_type_script = "uid://d30ogqwe20gck"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("2_cwnnc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624513849]
+shape = SubResource("CircleShape2D_xtywe")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cuwt4bv8iroof"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://divp65owd7gjv" path="res://resources/engine/physics_materials/metal.tres" id="1_51awu"]
+[ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="1_drv3i"]
+[ext_resource type="Texture2D" uid="uid://mcttoq4p6788" path="res://resources/visual/textures/triangle.tres" id="2_drv3i"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_drv3i"]
+points = PackedVector2Array(-16, 16, 16, 16, 0, -16)
+
+[node name="Triangle" type="RigidBody2D" unique_id=1575716861]
+input_pickable = true
+physics_material_override = ExtResource("1_51awu")
+continuous_cd = 2
+script = ExtResource("1_drv3i")
+metadata/_custom_type_script = "uid://d30ogqwe20gck"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("2_drv3i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624513849]
+shape = SubResource("ConvexPolygonShape2D_drv3i")

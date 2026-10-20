@@ -3,7 +3,7 @@ extends Camera2D
 const DRAG_WEIGHT: float = 30.0
 const ZOOM_INC: float = 0.25
 const ZOOM_MIN: float = 0.1
-const ZOOM_MAX: float = 5.0
+const ZOOM_MAX: float = 6.0
 
 var is_dragging: bool
 var target_position: Vector2

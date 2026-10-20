@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://uhegdtdelhqr" path="res://scenes/levels/level_box.gd" id="1_2oq2a"]
 [ext_resource type="Script" uid="uid://b10wqiylavd4h" path="res://classes/node/controlled_camera.gd" id="2_sh4qy"]
 [ext_resource type="Script" uid="uid://busd3yfk5p1mx" path="res://addons/godot-rapier2d/custom_nodes/rapier_static_body_2d.gd" id="4_0dwki"]
+[ext_resource type="PackedScene" uid="uid://c1eqtj65r14ig" path="res://scenes/objects/sphere.tscn" id="4_571p0"]
+[ext_resource type="PackedScene" uid="uid://cuwt4bv8iroof" path="res://scenes/objects/triangle.tscn" id="5_7myre"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_as85p"]
 distance = -3000.0
@@ -52,3 +54,9 @@ invert_border = 16384.0
 polygon = PackedVector2Array(3000, -3000, 3000, 3000, -3000, 3000, -3000, -3000)
 uv = PackedVector2Array(2972.4673, 66.69987, 2921.3896, 248.97836, 2708.8022, 203.88406, 2794.1592, 20.285889)
 metadata/_edit_lock_ = true
+
+[node name="Square" parent="." unique_id=1575716861 instance=ExtResource("4_571p0")]
+position = Vector2(-25.09201, 2950.362)
+
+[node name="Triangle" parent="." unique_id=773980281 instance=ExtResource("5_7myre")]
+position = Vector2(37.36682, 2971.2686)

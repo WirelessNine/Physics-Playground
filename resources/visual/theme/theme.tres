@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://c2eiwtjttdiya"]
+
+[ext_resource type="StyleBox" uid="uid://dnxisdpp0lxvu" path="res://resources/visual/theme/styleboxes/panel/background.tres" id="1_bfsiy"]
+[ext_resource type="StyleBox" uid="uid://cjptiwrpkakay" path="res://resources/visual/theme/styleboxes/button/button_hover.tres" id="1_fsea4"]
+[ext_resource type="StyleBox" uid="uid://doam6yqg1leg6" path="res://resources/visual/theme/styleboxes/button/button_normal.tres" id="2_ualjv"]
+[ext_resource type="StyleBox" uid="uid://dpnciks03err" path="res://resources/visual/theme/styleboxes/button/button_pressed.tres" id="3_7p8p5"]
+[ext_resource type="FontFile" uid="uid://bwasmhhifm8s4" path="res://assets/font/monogram-extended.ttf" id="5_t74le"]
+
+[resource]
+default_font = ExtResource("5_t74le")
+Button/styles/hover = ExtResource("1_fsea4")
+Button/styles/normal = ExtResource("2_ualjv")
+Button/styles/pressed = ExtResource("3_7p8p5")
+PanelContainer/styles/panel = ExtResource("1_bfsiy")

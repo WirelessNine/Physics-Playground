@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bkaa0hbhyn7ap"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://divp65owd7gjv" path="res://resources/engine/physics_materials/metal.tres" id="1_8o2uo"]
+[ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="1_kpept"]
+[ext_resource type="Texture2D" uid="uid://dro57pcpfivjr" path="res://resources/visual/textures/square.tres" id="3_moct5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
+custom_solver_bias = 0.3
+size = Vector2(32, 32)
+
+[node name="Square" type="RigidBody2D" unique_id=1575716861]
+input_pickable = true
+physics_material_override = ExtResource("1_8o2uo")
+continuous_cd = 2
+script = ExtResource("1_kpept")
+metadata/_custom_type_script = "uid://d30ogqwe20gck"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("3_moct5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624513849]
+shape = SubResource("RectangleShape2D_as85p")
