@@ -7,6 +7,5 @@
 custom_minimum_size = Vector2(32, 32)
 offset_right = 8.0
 offset_bottom = 8.0
-theme_type_variation = &"button_slot"
 icon = ExtResource("1_aaqe1")
 script = ExtResource("2_wlrae")

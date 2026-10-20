@@ -30,6 +30,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"a7b7949e-4cb3-4307-b654-c5947594a0c9",
 				"7c2569b8-b286-4921-a84f-927788bf6418",
 				"b11ee638-c2f9-4c75-8ac1-192b1ceafe89",
 				"9f2f2d20-5c9e-4889-9e35-54f57775388f",
@@ -198,6 +199,13 @@
 		{
 			"uuid": "7c2569b8-b286-4921-a84f-927788bf6418",
 			"title": "Rename ObjectMenu to BodyMenu",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "a7b7949e-4cb3-4307-b654-c5947594a0c9",
+			"title": "Load and show body items in body menu",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []

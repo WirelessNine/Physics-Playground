@@ -156,9 +156,8 @@ func return_scene(scene: Node) -> void:
 	_call_action_method(ActionMode.RETURNED, scene)
 
 
-##Calls the [param method] for each scene from the pool, with items from the [param array].
-##If [param bind_scene] is [code]true[/code], the scene will be the first argument in the method, otherwise it only the item.
-##Only for Batched access mode.
+##Calls the [param method] for each scene from the pool, with items from the [param array].[br]
+##The first parameter should be the scene/node, and the second one the item from the [param array].
 func update_scenes(array: Array, method: Callable) -> void:
 	if not access_mode == AccessMode.BATCHED:
 		push_error("access_mode is not BATCHED!")

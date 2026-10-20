@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byt8ynqks2g02"]
 
-[ext_resource type="Script" uid="uid://rxwty6cd03ab" path="res://addons/ui_expansion/objects/menu.gd" id="1_jx26v"]
 [ext_resource type="StyleBox" uid="uid://bmf3wmnhmnbs7" path="res://resources/visual/theme/styleboxes/panel/empty.tres" id="1_u8xof"]
+[ext_resource type="Script" uid="uid://cf15spqtsd4l0" path="res://scenes/ui/menus/body_menu.gd" id="2_i646q"]
 
 [node name="BodyMenu" type="PanelContainer" unique_id=495103655]
 anchors_preset = 15
@@ -11,46 +11,52 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("1_u8xof")
-script = ExtResource("1_jx26v")
+script = ExtResource("2_i646q")
 metadata/_custom_type_script = "uid://rxwty6cd03ab"
 metadata/_edit_lock_ = true
 
-[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=837559402]
+[node name="BodiesSplit" type="HSplitContainer" parent="." unique_id=837559402]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="BodiesPanel" type="PanelContainer" parent="HSplitContainer" unique_id=994531576]
+[node name="BodiesPanel" type="PanelContainer" parent="BodiesSplit" unique_id=994531576]
 custom_minimum_size = Vector2(175, 0)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/BodiesPanel" unique_id=1350167410]
+[node name="BodiesVBox" type="VBoxContainer" parent="BodiesSplit/BodiesPanel" unique_id=1350167410]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer/BodiesPanel/VBoxContainer" unique_id=1559314384]
+[node name="BodiesScroll" type="ScrollContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1559314384]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/BodiesPanel/VBoxContainer/ScrollContainer" unique_id=1984245848]
+[node name="BodiesScrollFlow" type="HFlowContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox/BodiesScroll" unique_id=790762731]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PropertiesHBox" type="HBoxContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1649454926]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/BodiesPanel/VBoxContainer" unique_id=1649454926]
-layout_mode = 2
-
-[node name="Environment" type="Button" parent="HSplitContainer/BodiesPanel/VBoxContainer/HBoxContainer" unique_id=970018454]
+[node name="Environment" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox/PropertiesHBox" unique_id=970018454]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Environment"
 
-[node name="Material" type="Button" parent="HSplitContainer/BodiesPanel/VBoxContainer/HBoxContainer" unique_id=801975989]
+[node name="Material" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox/PropertiesHBox" unique_id=801975989]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Material"
 
-[node name="Clear" type="Button" parent="HSplitContainer/BodiesPanel/VBoxContainer" unique_id=1469390376]
+[node name="Clear" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1469390376]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Clear"
 
-[node name="Control" type="Control" parent="HSplitContainer" unique_id=1798332751]
+[node name="Control" type="Control" parent="BodiesSplit" unique_id=1798332751]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
