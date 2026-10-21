@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://pdgiprjdgles"]
+
+[ext_resource type="Texture2D" uid="uid://bp01gccfo2nml" path="res://resources/visual/textures/l_shape.tres" id="1_8ofjb"]
+[ext_resource type="PackedScene" uid="uid://cvdqxxd0wxgbp" path="res://scenes/objects/l_shape.tscn" id="2_33pbk"]
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="3_3xdiv"]
+
+[resource]
+script = ExtResource("3_3xdiv")
+icon = ExtResource("1_8ofjb")
+name = "L Shape"
+description = "Shape in form of an F"
+scene = ExtResource("2_33pbk")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"

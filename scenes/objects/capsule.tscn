@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b8u8lb3lssjoy"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://divp65owd7gjv" path="res://resources/engine/physics_materials/metal.tres" id="1_78c3h"]
+[ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="2_ba5ie"]
+[ext_resource type="Texture2D" uid="uid://d4haqbpetni4p" path="res://resources/visual/textures/capsule.tres" id="3_78c3h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2bly"]
+radius = 8.0
+height = 32.0
+
+[node name="Capsule" type="RigidBody2D" unique_id=1575716861]
+input_pickable = true
+mass = 1000.0
+physics_material_override = ExtResource("1_78c3h")
+continuous_cd = 2
+script = ExtResource("2_ba5ie")
+metadata/_custom_type_script = "uid://d30ogqwe20gck"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("3_78c3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624513849]
+shape = SubResource("CapsuleShape2D_h2bly")

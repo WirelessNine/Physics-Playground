@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://c136hxqj0bd7e"]
+
+[ext_resource type="Texture2D" uid="uid://d4haqbpetni4p" path="res://resources/visual/textures/capsule.tres" id="1_iqca3"]
+[ext_resource type="PackedScene" uid="uid://b8u8lb3lssjoy" path="res://scenes/objects/capsule.tscn" id="2_w8s2f"]
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="3_aiysi"]
+
+[resource]
+script = ExtResource("3_aiysi")
+icon = ExtResource("1_iqca3")
+name = "Capsule"
+description = "Pill"
+scene = ExtResource("2_w8s2f")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"

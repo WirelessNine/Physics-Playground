@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cvdqxxd0wxgbp"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://divp65owd7gjv" path="res://resources/engine/physics_materials/metal.tres" id="1_faci1"]
+[ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="2_7wgas"]
+[ext_resource type="Texture2D" uid="uid://bp01gccfo2nml" path="res://resources/visual/textures/l_shape.tres" id="3_faci1"]
+
+[node name="Square" type="RigidBody2D" unique_id=1575716861]
+input_pickable = true
+physics_material_override = ExtResource("1_faci1")
+continuous_cd = 2
+script = ExtResource("2_7wgas")
+metadata/_custom_type_script = "uid://d30ogqwe20gck"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235528886]
+texture = ExtResource("3_faci1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=880056020]
+polygon = PackedVector2Array(-16, -16, -8, -16, -8, 8, 16, 8, 16, 16, -16, 16)

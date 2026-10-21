@@ -20,7 +20,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="BodiesPanel" type="PanelContainer" parent="BodiesSplit" unique_id=994531576]
-custom_minimum_size = Vector2(175, 0)
+custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 
 [node name="BodiesVBox" type="VBoxContainer" parent="BodiesSplit/BodiesPanel" unique_id=1350167410]

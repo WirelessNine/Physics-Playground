@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BodyItem" format=3 uid="uid://cogc0k2khl0ec"]
+
+[ext_resource type="Texture2D" uid="uid://cguweopfuglb8" path="res://resources/visual/textures/trapezoid.tres" id="1_jkv6d"]
+[ext_resource type="PackedScene" uid="uid://ipgyqla3vehm" path="res://scenes/objects/trapezoid.tscn" id="2_oh4eu"]
+[ext_resource type="Script" uid="uid://6swe4g2e1i5e" path="res://classes/objects/body_item.gd" id="3_xlim8"]
+
+[resource]
+script = ExtResource("3_xlim8")
+icon = ExtResource("1_jkv6d")
+name = "Trapezoid"
+description = "I'm tired"
+scene = ExtResource("2_oh4eu")
+metadata/_custom_type_script = "uid://6swe4g2e1i5e"
