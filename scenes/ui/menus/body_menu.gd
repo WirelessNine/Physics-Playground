@@ -10,8 +10,7 @@ const BODY_ITEMS_FOLDER_PATH: String = "res://resources/items/bodies/"
 @onready var clear_button: Button = %Clear
 
 var body_slot_pool: ScenePool
-
-var _body_items: Array[BodyItem]
+var body_items_collection: Registry.Collection
 
 
 func _ready() -> void:
@@ -24,9 +23,13 @@ func _ready() -> void:
 		_action_method,
 	)
 
-	_load_body_items()
+	body_items_collection = Registry.create_collection(
+		"body_items",
+		&"BodyItem",
+		BODY_ITEMS_FOLDER_PATH,
+	)
 
-	body_slot_pool.update_scenes(_body_items, update_slot)
+	body_slot_pool.update_scenes(body_items_collection.items, update_slot)
 
 
 func update_slot(slot: Button, item: BodyItem) -> void:
@@ -43,11 +46,6 @@ func _action_method(action: ScenePool.ActionMode, scene: CanvasItem) -> void:
 			scene.show()
 		ScenePool.ActionMode.RETURNED:
 			scene.hide()
-
-
-func _load_body_items() -> void:
-	_body_items = []
-	_body_items.assign(Utils.load_resources_recursive(BODY_ITEMS_FOLDER_PATH, &"BodyItem"))
 
 
 func _on_slot_selected(body_item: BodyItem) -> void:
