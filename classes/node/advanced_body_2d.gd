@@ -38,8 +38,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		state.angular_velocity * r.x,
 	)
 
-	var stiffness: float = 800.0
-	var damping: float = 40.0
+	var body_mass: float = 1.0 / state.inverse_mass
+
+	var stiffness: float = 800.0 * body_mass
+	var damping: float = 40.0 * body_mass
 	var force: Vector2 = (error * stiffness) - (point_velocity * damping)
 
 	state.apply_force(force, r)

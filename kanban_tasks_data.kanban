@@ -30,6 +30,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"59f5157c-1804-4fd8-b211-7911a6bd11ad",
 				"638cf2cf-3dc6-4e5f-9ed6-e7ba95971732",
 				"a7b7949e-4cb3-4307-b654-c5947594a0c9",
 				"7c2569b8-b286-4921-a84f-927788bf6418",
@@ -214,6 +215,13 @@
 		{
 			"uuid": "638cf2cf-3dc6-4e5f-9ed6-e7ba95971732",
 			"title": "Add more shapes",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "59f5157c-1804-4fd8-b211-7911a6bd11ad",
+			"title": "Fix dragging of heavy objects",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []

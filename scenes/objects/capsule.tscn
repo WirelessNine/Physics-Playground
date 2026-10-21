@@ -10,7 +10,6 @@ height = 32.0
 
 [node name="Capsule" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true
-mass = 1000.0
 physics_material_override = ExtResource("1_78c3h")
 continuous_cd = 2
 script = ExtResource("2_ba5ie")
