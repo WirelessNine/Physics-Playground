@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cguweopfuglb8" path="res://resources/visual/textures/trapezoid.tres" id="3_j105i"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_igt5a"]
-points = PackedVector2Array(-25, 0, 25, 0, 64, 64, -64, 64)
+points = PackedVector2Array(-9, 32, 9, 32, 17, 48, -17, 48)
 
 [node name="Square" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true

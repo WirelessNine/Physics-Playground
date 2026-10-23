@@ -30,6 +30,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
 				"fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
 				"ac4832e0-5387-4643-ac37-d85b9fcf2810",
 				"59f5157c-1804-4fd8-b211-7911a6bd11ad",
@@ -239,6 +240,13 @@
 			"uuid": "fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
 			"title": "Replace body sprites with svg",
 			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
+			"title": "Replace body sprites back to pixel art",
+			"description": "Turns out I don't like SVG ¯\\_(ツ)_/¯",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
 		}

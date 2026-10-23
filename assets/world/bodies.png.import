@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s6rvs44nphmj"
-path="res://.godot/imported/bodies.svg-ee1532bae818365bb78c6baf57b10244.ctex"
+uid="uid://b668w63we8r1k"
+path="res://.godot/imported/bodies.png-541f2bc70c21446f80abe2708a8a06d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/world/bodies.svg"
-dest_files=["res://.godot/imported/bodies.svg-ee1532bae818365bb78c6baf57b10244.ctex"]
+source_file="res://assets/world/bodies.png"
+dest_files=["res://.godot/imported/bodies.png-541f2bc70c21446f80abe2708a8a06d5.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=2.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -1,8 +1,8 @@
 [gd_resource type="AtlasTexture" format=3 uid="uid://b16k4acd3ycp"]
 
-[ext_resource type="Texture2D" uid="uid://s6rvs44nphmj" path="res://assets/world/bodies.svg" id="1_1mfry"]
+[ext_resource type="Texture2D" uid="uid://b668w63we8r1k" path="res://assets/world/bodies.png" id="1_1mfry"]
 
 [resource]
 atlas = ExtResource("1_1mfry")
-region = Rect2(128, 0, 128, 128)
+region = Rect2(32, 0, 32, 32)
 filter_clip = true

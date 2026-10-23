@@ -29,6 +29,7 @@ process_callback = 0
 script = ExtResource("2_sh4qy")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1483718109]
+z_index = 1
 script = ExtResource("4_0dwki")
 metadata/_custom_type_script = "uid://busd3yfk5p1mx"
 metadata/_edit_lock_ = true
