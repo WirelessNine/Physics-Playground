@@ -13,7 +13,6 @@
 			"tasks": [
 				"d850e74c-00d9-44c6-a497-d686fbb11717",
 				"df9489f6-2e9a-48b2-9352-42e9d91c0e07",
-				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
 				"2fb4f5c4-e9b6-4aae-a929-fb3d55f40b02",
 				"f0b50e49-234b-431f-92e8-2ad5ade86bf8",
 				"6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
@@ -30,6 +29,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
 				"d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
 				"fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
 				"ac4832e0-5387-4643-ac37-d85b9fcf2810",
@@ -119,7 +119,7 @@
 		},
 		{
 			"uuid": "23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
-			"title": "Add Simulation manager",
+			"title": "Add Simulation manager and move dragging",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
