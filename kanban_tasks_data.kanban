@@ -16,8 +16,7 @@
 				"2fb4f5c4-e9b6-4aae-a929-fb3d55f40b02",
 				"f0b50e49-234b-431f-92e8-2ad5ade86bf8",
 				"6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
-				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06",
-				"2fabbc38-0d06-43c9-88a1-78af064ad1a4"
+				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06"
 			]
 		},
 		{
@@ -29,6 +28,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"2fabbc38-0d06-43c9-88a1-78af064ad1a4",
 				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
 				"d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
 				"fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
@@ -161,7 +161,7 @@
 		},
 		{
 			"uuid": "2fabbc38-0d06-43c9-88a1-78af064ad1a4",
-			"title": "Add select outline",
+			"title": "Remove the entire Simulation script",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
