@@ -53,6 +53,12 @@ folder_colors={
 theme/custom="uid://c2eiwtjttdiya"
 common/auto_focus_strategy=1
 
+[importer_defaults]
+
+texture={
+&"svg/scale": 2.0
+}
+
 [input]
 
 camera_drag={
@@ -86,16 +92,16 @@ joypads/ignore_joypad_on_unfocused_application=true
 common/physics_ticks_per_second=120
 2d/physics_engine="Rapier2D"
 3d/physics_engine="Jolt Physics"
+2d/default_gravity=1960.0
 common/physics_interpolation=true
 rapier/solver/num_internal_pgs_iterations=4
 rapier/solver/num_internal_stabilization_iterations=8
-rapier/solver/num_iterations=32
-rapier/motion/recover_attempts=8
-rapier/solver/max_ccd_substeps=24
+rapier/solver/num_iterations=12
+rapier/motion/recover_attempts=6
+rapier/solver/max_ccd_substeps=12
 rapier/solver/normalized_prediction_distance=0.05
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 lights_and_shadows/multi_bounce_occlusion/enabled=true

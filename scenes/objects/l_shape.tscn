@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d30ogqwe20gck" path="res://classes/node/advanced_body_2d.gd" id="2_7wgas"]
 [ext_resource type="Texture2D" uid="uid://bp01gccfo2nml" path="res://resources/visual/textures/l_shape.tres" id="3_faci1"]
 
-[node name="Square" type="RigidBody2D" unique_id=1575716861]
+[node name="LShape" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true
 physics_material_override = ExtResource("1_faci1")
 continuous_cd = 2
@@ -15,4 +15,4 @@ metadata/_custom_type_script = "uid://d30ogqwe20gck"
 texture = ExtResource("3_faci1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=880056020]
-polygon = PackedVector2Array(-16, -16, -8, -16, -8, 8, 16, 8, 16, 16, -16, 16)
+polygon = PackedVector2Array(-64, -64, -30, -64, -30, 30, 64, 30, 64, 64, -64, 64)

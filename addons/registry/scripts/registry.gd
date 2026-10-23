@@ -78,7 +78,6 @@ static func _load_resources_into(array: Array, type: StringName, path: String) -
 			var resource := load(full_path)
 
 			if resource and _matches_class(resource, type):
-				print(resource)
 				array.append(resource)
 
 		file_name = dir_access.get_next()

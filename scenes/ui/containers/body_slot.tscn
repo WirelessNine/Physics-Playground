@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://cjy41xh862cbv" path="res://scenes/ui/containers/body_slot.gd" id="2_wlrae"]
 
 [node name="BodySlot" type="Button" unique_id=1299098077]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 offset_right = 8.0
 offset_bottom = 8.0
 icon = ExtResource("1_aaqe1")
+expand_icon = true
 script = ExtResource("2_wlrae")

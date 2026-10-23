@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhy0a4ixn4858" path="res://scenes/levels/level_box.tscn" id="1_e64el"]
 [ext_resource type="PackedScene" uid="uid://byt8ynqks2g02" path="res://scenes/ui/menus/body_menu.tscn" id="2_ma5rq"]
+[ext_resource type="Script" uid="uid://deo45luw83y6s" path="res://scenes/ui/other/fps_label.gd" id="3_e3dby"]
 
 [node name="Game" type="Node" unique_id=80202152]
 
@@ -10,3 +11,13 @@
 [node name="UI" type="CanvasLayer" parent="." unique_id=265909197]
 
 [node name="ObjectMenu" parent="UI" unique_id=495103655 instance=ExtResource("2_ma5rq")]
+
+[node name="FPSLabel" type="Label" parent="UI" unique_id=1630145019]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 13.0
+grow_horizontal = 0
+text = "144"
+script = ExtResource("3_e3dby")

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mcttoq4p6788" path="res://resources/visual/textures/triangle.tres" id="2_drv3i"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_drv3i"]
-points = PackedVector2Array(-16, 16, 16, 16, 0, -16)
+points = PackedVector2Array(-64, 64, 64, 64, 0, -64)
 
 [node name="Triangle" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true

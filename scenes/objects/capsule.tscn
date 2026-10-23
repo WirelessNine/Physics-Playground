@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d4haqbpetni4p" path="res://resources/visual/textures/capsule.tres" id="3_78c3h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2bly"]
-radius = 8.0
-height = 32.0
+radius = 29.0
+height = 128.0
 
 [node name="Capsule" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true

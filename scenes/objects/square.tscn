@@ -6,7 +6,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_as85p"]
 custom_solver_bias = 0.3
-size = Vector2(32, 32)
+size = Vector2(128, 128)
 
 [node name="Square" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true

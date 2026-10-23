@@ -30,6 +30,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
 				"ac4832e0-5387-4643-ac37-d85b9fcf2810",
 				"59f5157c-1804-4fd8-b211-7911a6bd11ad",
 				"638cf2cf-3dc6-4e5f-9ed6-e7ba95971732",
@@ -230,6 +231,13 @@
 		{
 			"uuid": "ac4832e0-5387-4643-ac37-d85b9fcf2810",
 			"title": "Implement Registry plugin",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "fdf6a0a4-3f2f-4bd8-ac8d-9c2d52a1b99a",
+			"title": "Replace body sprites with svg",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []

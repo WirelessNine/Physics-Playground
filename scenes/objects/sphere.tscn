@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b16k4acd3ycp" path="res://resources/visual/textures/circle.tres" id="2_cwnnc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtywe"]
-radius = 16.0
+radius = 64.03124
 
 [node name="Square" type="RigidBody2D" unique_id=1575716861]
 input_pickable = true
