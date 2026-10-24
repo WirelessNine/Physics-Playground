@@ -16,7 +16,14 @@
 				"2fb4f5c4-e9b6-4aae-a929-fb3d55f40b02",
 				"f0b50e49-234b-431f-92e8-2ad5ade86bf8",
 				"6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
-				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06"
+				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06",
+				"6e94f866-4e0a-4512-a80b-dc03d6d72c1d",
+				"300d3f46-dd46-4f17-952e-4408e5ac8a83",
+				"b066dedb-c63d-40eb-bbd0-cdc92f305b85",
+				"3b09efe0-63c5-4690-80b6-da85036f82ca",
+				"7688d4d0-8fdc-49ff-a3a7-49d859801347",
+				"4c4ee480-c911-4e7f-acbd-c68ad2bb5118",
+				"65e68f8b-407f-4429-a090-d33b6b3eda1d"
 			]
 		},
 		{
@@ -28,6 +35,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"ad1bb7fa-984d-42e0-87af-09d0bc66ac20",
 				"2fabbc38-0d06-43c9-88a1-78af064ad1a4",
 				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
 				"d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
@@ -247,6 +255,62 @@
 			"uuid": "d51cff9e-c3e8-425c-a7c3-6c439229aaa4",
 			"title": "Replace body sprites back to pixel art",
 			"description": "Turns out I don't like SVG ¯\\_(ツ)_/¯",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "300d3f46-dd46-4f17-952e-4408e5ac8a83",
+			"title": "Add simulation slow motion",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "6e94f866-4e0a-4512-a80b-dc03d6d72c1d",
+			"title": "Add simulatin pausing",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "ad1bb7fa-984d-42e0-87af-09d0bc66ac20",
+			"title": "Add body dragging",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "b066dedb-c63d-40eb-bbd0-cdc92f305b85",
+			"title": "Add body rotation with A/D",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "3b09efe0-63c5-4690-80b6-da85036f82ca",
+			"title": "Add paused body transforming",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "7688d4d0-8fdc-49ff-a3a7-49d859801347",
+			"title": "Add multi-body selection",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "4c4ee480-c911-4e7f-acbd-c68ad2bb5118",
+			"title": "Add multi-body transforming",
+			"description": "",
+			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
+			"steps": []
+		},
+		{
+			"uuid": "65e68f8b-407f-4429-a090-d33b6b3eda1d",
+			"title": "Add body context menu",
+			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []
 		}
