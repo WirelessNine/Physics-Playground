@@ -10,6 +10,7 @@ const SIMULATION_LERP_WEIGHT: float = 0.1
 const DRAG_STIFFNESS: float = 800.0
 const DRAG_DAMPING: float = 40.0
 const ROTATION_SPEED: float = 180.0
+const PAUSED_ROTATION_SPEED: float = 0.02
 const ROTATION_LERP_WEIGHT: float = 0.2
 
 #Time scale variables
@@ -20,7 +21,6 @@ var target_time_scale: float = 1.0
 #Drag variables
 var dragged_body_rid: RID
 var drag_rotation_started: bool = false
-var drag_rotation_offset: float = 0.0
 var drag_point := Vector2.ZERO
 var drag_query: PhysicsPointQueryParameters2D
 
@@ -32,7 +32,7 @@ func _ready() -> void:
 	drag_query = PhysicsPointQueryParameters2D.new()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	Engine.time_scale = lerpf(Engine.time_scale, target_time_scale, SIMULATION_LERP_WEIGHT)
 
 
@@ -41,6 +41,11 @@ func _physics_process(_delta: float) -> void:
 	space_state = get_world_2d().direct_space_state
 
 	_drag_input()
+
+	if is_paused:
+		_drag_paused()
+		return
+
 	_drag_rotation()
 	_drag_process()
 
@@ -66,7 +71,6 @@ func _drag_input() -> void:
 			)
 			dragged_body_rid = RID()
 			drag_rotation_started = false
-			drag_rotation_offset = 0.0
 		return
 
 	drag_query.position = global_mouse
@@ -88,6 +92,40 @@ func _drag_input() -> void:
 
 	dragged_body_rid = rid
 	drag_point = body_xform.affine_inverse() * global_mouse
+
+
+func _drag_paused() -> void:
+	if not dragged_body_rid.is_valid():
+		return
+
+	var state: PhysicsDirectBodyState2D = PhysicsServer2D.body_get_direct_state(dragged_body_rid)
+
+	state.linear_velocity = Vector2.ZERO
+	state.angular_velocity = 0.0
+
+	var current_xform: Transform2D = PhysicsServer2D.body_get_state(
+		dragged_body_rid,
+		PhysicsServer2D.BODY_STATE_TRANSFORM,
+	)
+
+	var current_rotation: float = current_xform.get_rotation()
+
+	if Input.is_action_pressed(&"rotate_left"):
+		current_rotation -= PAUSED_ROTATION_SPEED
+	elif Input.is_action_pressed(&"rotate_right"):
+		current_rotation += PAUSED_ROTATION_SPEED
+
+	var r: Vector2 = drag_point.rotated(current_rotation)
+	var global_grab_pos: Vector2 = current_xform.origin + r
+	var error: Vector2 = get_global_mouse_position() - global_grab_pos
+
+	var new_xform := Transform2D(current_rotation, current_xform.origin + error)
+
+	PhysicsServer2D.body_set_state(
+		dragged_body_rid,
+		PhysicsServer2D.BODY_STATE_TRANSFORM,
+		new_xform,
+	)
 
 
 func _drag_rotation() -> void:
