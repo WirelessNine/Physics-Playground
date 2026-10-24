@@ -1,10 +1,21 @@
 extends Node2D
 
+#Time scale constants
+const SIMULATION_NORMAL: float = 1.0
+const SIMULATION_SLOW: float = 0.15
+const SIMULATION_PAUSED: float = 0.0
+const SIMULATION_LERP_WEIGHT: float = 0.1
+
 #Drag constants
 const DRAG_STIFFNESS: float = 800.0
 const DRAG_DAMPING: float = 40.0
 const ROTATION_SPEED: float = 180.0
 const ROTATION_LERP_WEIGHT: float = 0.2
+
+#Time scale variables
+var is_slowed: bool = false
+var is_paused: bool = false
+var target_time_scale: float = 1.0
 
 #Drag variables
 var dragged_body_rid: RID
@@ -21,6 +32,10 @@ func _ready() -> void:
 	drag_query = PhysicsPointQueryParameters2D.new()
 
 
+func _process(delta: float) -> void:
+	Engine.time_scale = lerpf(Engine.time_scale, target_time_scale, SIMULATION_LERP_WEIGHT)
+
+
 func _physics_process(_delta: float) -> void:
 	global_mouse = get_global_mouse_position()
 	space_state = get_world_2d().direct_space_state
@@ -28,6 +43,16 @@ func _physics_process(_delta: float) -> void:
 	_drag_input()
 	_drag_rotation()
 	_drag_process()
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"simulation_pause"):
+		is_paused = not is_paused
+		_update_target_time_scale()
+
+	if event.is_action_pressed(&"simulation_slow"):
+		is_slowed = not is_slowed
+		_update_target_time_scale()
 
 
 ##Detects mouse clicks and checks if there are any bodies.
@@ -124,3 +149,12 @@ func _is_rid_rigid(rid: RID) -> bool:
 
 func _is_rotation_input_pressed() -> bool:
 	return Input.is_action_pressed(&"rotate_left") or Input.is_action_pressed(&"rotate_right")
+
+
+func _update_target_time_scale() -> void:
+	if is_paused:
+		target_time_scale = SIMULATION_PAUSED
+	elif is_slowed:
+		target_time_scale = SIMULATION_SLOW
+	else:
+		target_time_scale = SIMULATION_NORMAL
