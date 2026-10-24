@@ -18,8 +18,6 @@
 				"6bf88067-6d96-4f84-80f1-5f8c66cf92b9",
 				"add94f81-ff14-48c8-b7ef-e6fdd6b3db06",
 				"6e94f866-4e0a-4512-a80b-dc03d6d72c1d",
-				"300d3f46-dd46-4f17-952e-4408e5ac8a83",
-				"b066dedb-c63d-40eb-bbd0-cdc92f305b85",
 				"3b09efe0-63c5-4690-80b6-da85036f82ca",
 				"7688d4d0-8fdc-49ff-a3a7-49d859801347",
 				"4c4ee480-c911-4e7f-acbd-c68ad2bb5118",
@@ -35,6 +33,7 @@
 			"uuid": "f7f470d0-2f5d-439e-b249-39379a4ef222",
 			"title": "Done",
 			"tasks": [
+				"b066dedb-c63d-40eb-bbd0-cdc92f305b85",
 				"ad1bb7fa-984d-42e0-87af-09d0bc66ac20",
 				"2fabbc38-0d06-43c9-88a1-78af064ad1a4",
 				"23e8bc3d-d19f-46b6-89a3-e0a27f3bdc7c",
@@ -259,15 +258,8 @@
 			"steps": []
 		},
 		{
-			"uuid": "300d3f46-dd46-4f17-952e-4408e5ac8a83",
-			"title": "Add simulation slow motion",
-			"description": "",
-			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
-			"steps": []
-		},
-		{
 			"uuid": "6e94f866-4e0a-4512-a80b-dc03d6d72c1d",
-			"title": "Add simulatin pausing",
+			"title": "Add simulation time scaling",
 			"description": "",
 			"category": "db3a4a8d-baed-4265-8088-c75af94a4efe",
 			"steps": []

@@ -3,10 +3,14 @@ extends Node2D
 #Drag constants
 const DRAG_STIFFNESS: float = 800.0
 const DRAG_DAMPING: float = 40.0
+const ROTATION_SPEED: float = 180.0
+const ROTATION_LERP_WEIGHT: float = 0.2
 
 #Drag variables
 var dragged_body_rid: RID
-var drag_point: Vector2
+var drag_rotation_started: bool = false
+var drag_rotation_offset: float = 0.0
+var drag_point := Vector2.ZERO
 var drag_query: PhysicsPointQueryParameters2D
 
 var global_mouse: Vector2
@@ -22,6 +26,7 @@ func _physics_process(_delta: float) -> void:
 	space_state = get_world_2d().direct_space_state
 
 	_drag_input()
+	_drag_rotation()
 	_drag_process()
 
 
@@ -29,7 +34,14 @@ func _physics_process(_delta: float) -> void:
 func _drag_input() -> void:
 	if not Input.is_action_just_pressed(&"left_button"):
 		if Input.is_action_just_released(&"left_button"):
+			PhysicsServer2D.body_set_param(
+				dragged_body_rid,
+				PhysicsServer2D.BODY_PARAM_GRAVITY_SCALE,
+				1.0,
+			)
 			dragged_body_rid = RID()
+			drag_rotation_started = false
+			drag_rotation_offset = 0.0
 		return
 
 	drag_query.position = global_mouse
@@ -51,6 +63,32 @@ func _drag_input() -> void:
 
 	dragged_body_rid = rid
 	drag_point = body_xform.affine_inverse() * global_mouse
+
+
+func _drag_rotation() -> void:
+	if not dragged_body_rid.is_valid():
+		return
+
+	if (
+		Input.is_action_just_pressed(&"rotate_left")
+		or Input.is_action_just_pressed(&"rotate_right")
+	):
+		drag_rotation_started = true
+
+		PhysicsServer2D.body_set_param(
+			dragged_body_rid,
+			PhysicsServer2D.BODY_PARAM_GRAVITY_SCALE,
+			0.0,
+		)
+
+	var state: PhysicsDirectBodyState2D = PhysicsServer2D.body_get_direct_state(dragged_body_rid)
+
+	var radians: float = deg_to_rad(ROTATION_SPEED)
+
+	if Input.is_action_pressed(&"rotate_left"):
+		state.angular_velocity = lerpf(state.angular_velocity, -radians, ROTATION_LERP_WEIGHT)
+	elif Input.is_action_pressed(&"rotate_right"):
+		state.angular_velocity = lerpf(state.angular_velocity, radians, ROTATION_LERP_WEIGHT)
 
 
 func _drag_process() -> void:
@@ -76,6 +114,13 @@ func _drag_process() -> void:
 
 	PhysicsServer2D.body_apply_force(dragged_body_rid, force, r)
 
+	if drag_rotation_started and not _is_rotation_input_pressed():
+		state.angular_velocity = lerpf(state.angular_velocity, 0.0, ROTATION_LERP_WEIGHT)
+
 
 func _is_rid_rigid(rid: RID) -> bool:
 	return PhysicsServer2D.body_get_mode(rid) == PhysicsServer2D.BODY_MODE_RIGID
+
+
+func _is_rotation_input_pressed() -> bool:
+	return Input.is_action_pressed(&"rotate_left") or Input.is_action_pressed(&"rotate_right")
