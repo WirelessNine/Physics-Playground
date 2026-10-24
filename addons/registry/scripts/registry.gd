@@ -55,32 +55,21 @@ static func remove_collection(collection: Collection) -> void:
 
 
 static func _load_resources_into(array: Array, type: StringName, path: String) -> void:
-	var dir_access := DirAccess.open(path)
+	var file_names: PackedStringArray = ResourceLoader.list_directory(path)
 
-	if dir_access == null:
-		push_error("Failed to open directory: ", path, ". Error: ", DirAccess.get_open_error())
+	if file_names.is_empty():
 		return
 
-	dir_access.list_dir_begin()
-	var file_name: String = dir_access.get_next()
+	for x: String in file_names:
+		var full_path: String = path.path_join(x)
 
-	while not file_name.is_empty():
-		if file_name.begins_with("."):
-			file_name = dir_access.get_next()
-			continue
-
-		var full_path: String = path.path_join(file_name)
-
-		if dir_access.current_is_dir():
-			_load_resources_into(array, type, full_path)
-
-		elif file_name.get_extension() in EXTENSIONS:
+		if x.ends_with("/"):
+			_load_resources_into(array, type, full_path.trim_suffix("/"))
+		elif x.get_extension() in EXTENSIONS:
 			var resource := load(full_path)
 
 			if resource and _matches_class(resource, type):
 				array.append(resource)
-
-		file_name = dir_access.get_next()
 
 
 static func _matches_class(resource: Resource, type: StringName) -> bool:
