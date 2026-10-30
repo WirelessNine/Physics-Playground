@@ -19,3 +19,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		add_child(object)
 		object.position = object.get_global_mouse_position()
 		object.reset_physics_interpolation()
+
+		Simulation.bodies.append(object)

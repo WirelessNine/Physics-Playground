@@ -27,6 +27,8 @@ var drag_query: PhysicsPointQueryParameters2D
 var global_mouse: Vector2
 var space_state: PhysicsDirectSpaceState2D
 
+var bodies: Array[AdvancedBody2D]
+
 
 func _ready() -> void:
 	drag_query = PhysicsPointQueryParameters2D.new()

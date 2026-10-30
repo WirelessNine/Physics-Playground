@@ -15,48 +15,30 @@ script = ExtResource("2_i646q")
 metadata/_custom_type_script = "uid://rxwty6cd03ab"
 metadata/_edit_lock_ = true
 
-[node name="BodiesSplit" type="HSplitContainer" parent="." unique_id=837559402]
+[node name="Tooltip" type="Label" parent="." unique_id=1703530996]
 layout_mode = 2
-mouse_filter = 2
+size_flags_horizontal = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(60, 0)
+text = "Capsule"
 
-[node name="BodiesPanel" type="PanelContainer" parent="BodiesSplit" unique_id=994531576]
-custom_minimum_size = Vector2(180, 0)
+[node name="BodiesPanel" type="PanelContainer" parent="." unique_id=994531576]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="BodiesVBox" type="VBoxContainer" parent="BodiesPanel" unique_id=1350167410]
 layout_mode = 2
 
-[node name="BodiesVBox" type="VBoxContainer" parent="BodiesSplit/BodiesPanel" unique_id=1350167410]
-layout_mode = 2
-
-[node name="BodiesScroll" type="ScrollContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1559314384]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="BodiesScrollFlow" type="HFlowContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox/BodiesScroll" unique_id=790762731]
+[node name="BodiesScrollFlow" type="VBoxContainer" parent="BodiesPanel/BodiesVBox" unique_id=943627898]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PropertiesHBox" type="HBoxContainer" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1649454926]
-layout_mode = 2
-
-[node name="Environment" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox/PropertiesHBox" unique_id=970018454]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Environment"
-
-[node name="Material" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox/PropertiesHBox" unique_id=801975989]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Material"
-
-[node name="Clear" type="Button" parent="BodiesSplit/BodiesPanel/BodiesVBox" unique_id=1469390376]
+[node name="Clear" type="Button" parent="BodiesPanel/BodiesVBox" unique_id=1469390376]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Clear"
 
-[node name="Control" type="Control" parent="BodiesSplit" unique_id=1798332751]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 2
+[connection signal="pressed" from="BodiesPanel/BodiesVBox/Clear" to="." method="_on_clear_pressed"]

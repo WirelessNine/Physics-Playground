@@ -26,6 +26,10 @@ script = ExtResource("1_2oq2a")
 position = Vector2(0, 2560.9321)
 zoom = Vector2(0.5, 0.5)
 process_callback = 0
+limit_left = -8000
+limit_top = -7000
+limit_right = 8000
+limit_bottom = 7000
 script = ExtResource("2_sh4qy")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1483718109]
